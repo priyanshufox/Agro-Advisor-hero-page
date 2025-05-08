@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgroAdvisor - Smart Farming Solutions</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.3/cdn.min.js"
+      defer
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <style>
+      .bg-gradient {
+        background: linear-gradient(90deg, #4caf50 0%, #8bc34a 100%);
+      }
+      .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+      .testimonial-card {
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="font-sans">
+    <!-- Header with Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+          <div class="flex items-center">
+            <img
+              src="./assets/logo.png"
+              alt="AgroAdvisor Logo"
+              class="h-10 w-10 mr-2 rounded-full"
+            />
+            <span class="text-2xl font-bold text-green-700">AgroAdvisor</span>
+          </div>
+          <nav class="hidden md:flex space-x-8">
+            <a
+              href="#home"
+              class="text-green-800 hover:text-green-600 font-medium"
+              >Home</a
+            >
+            <a
+              href="#features"
+              class="text-green-800 hover:text-green-600 font-medium"
+              >Features</a
+            >
+            <a
+              href="#how-it-works"
+              class="text-green-800 hover:text-green-600 font-medium"
+              >How It Works</a
+            >
+            <a
+              href="#research"
+              class="text-green-800 hover:text-green-600 font-medium"
+              >Research</a
+            >
+            <a
+              href="#team"
+              class="text-green-800 hover:text-green-600 font-medium"
+              >Our Team</a
+            >
+          
+          </nav>
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-button"
+              class="text-gray-500 hover:text-green-700 focus:outline-none"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="hidden md:block">
+            <a
+              href="#download"
+              class="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-6 rounded-full transition duration-300"
+            >
+              Download App
+            </a>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobile-menu"
+          class="md:hidden hidden bg-white py-2 px-4 shadow-inner"
+          x-show="open"
+        >
+          <a href="#home" class="block py-2 text-green-800 hover:text-green-600"
+            >Home</a
+          >
+          <a
+            href="#features"
+            class="block py-2 text-green-800 hover:text-green-600"
+            >Features</a
+          >
+          <a
+            href="#how-it-works"
+            class="block py-2 text-green-800 hover:text-green-600"
+            >How It Works</a
+          >
+          <a
+            href="#research"
+            class="block py-2 text-green-800 hover:text-green-600"
+            >Research</a
+          >
+          <a href="#team" class="block py-2 text-green-800 hover:text-green-600"
+            >Our Team</a
+          >
+         
+          <a
+            href="#download"
+            class="block py-2 mt-2 bg-green-600 text-white rounded text-center"
+            >Download App</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient text-white py-16 md:py-24">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+          <div class="mb-10 md:mb-0 md:w-1/2">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">
+              Smart Farming at Your Fingertips
+            </h1>
+            <p class="text-lg md:text-xl mb-8">
+              AgroAdvisor helps farmers make data-driven decisions with
+              personalized crop recommendations, real-time weather alerts, and
+              expert farming guidance.
+            </p>
+            <div
+              class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
+            >
+              <a
+                href="#download"
+                class="bg-white text-green-700 font-medium py-3 px-8 rounded-full text-center hover:bg-gray-100 transition duration-300"
+              >
+                <i class="fab fa-google-play mr-2"></i> Google Play
+              </a>
+              <a
+                href="#download"
+                class="bg-white text-green-700 font-medium py-3 px-8 rounded-full text-center hover:bg-gray-100 transition duration-300"
+              >
+                <i class="fab fa-apple mr-2"></i> App Store
+              </a>
+            </div>
+          </div>
+          <div class="md:w-1/2 flex justify-center">
+            <img
+              src="./assets/hero.png"
+              alt="AgroAdvisor App"
+              class="rounded-3xl shadow-xl max-w-xs md:max-w-sm"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Company Info -->
+          <div>
+            <div class="flex items-center mb-4">
+              <img
+                src="./assets/logo.png"
+                alt="AgroAdvisor Logo"
+                class="h-10 w-10 mr-2 rounded-full"
+              />
+              <span class="text-xl font-bold">AgroAdvisor</span>
+            </div>
+            <p class="text-gray-400 mb-4">
+              Empowering farmers with data-driven insights and AI-powered
+              recommendations.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-white"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-gray-400 hover:text-white"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-gray-400 hover:text-white"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-gray-400 hover:text-white"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#home" class="text-gray-400 hover:text-white">Home</a>
+              </li>
+              <li>
+                <a href="#features" class="text-gray-400 hover:text-white"
+                  >Features</a
+                >
+              </li>
+              <li>
+                <a href="#how-it-works" class="text-gray-400 hover:text-white"
+                  >How It Works</a
+                >
+              </li>
+              <li>
+                <a href="#research" class="text-gray-400 hover:text-white"
+                  >Research</a
+                >
+              </li>
+              <li>
+                <a href="#team" class="text-gray-400 hover:text-white"
+                  >Our Team</a
+                >
+              </li>
+             
+            </ul>
+          </div>
+
+          <!-- Features -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Features</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Crop Suggestion</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Weather Forecast</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Fertilizer Guide</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Pest Detection</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Government Schemes</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >AI Assistant</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <i class="fas fa-map-marker-alt mt-1 mr-2"></i>
+                <span>Galgotias College of Engineering and technology</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-phone mt-1 mr-2"></i>
+                <span>+91 9406245966</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-envelope mt-1 mr-2"></i>
+                <span>priyanshugevra@gmail.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400">© 2025 AgroAdvisor. All rights reserved.</p>
+          <div class="mt-4 md:mt-0">
+            <a href="#" class="text-gray-400 hover:text-white mr-4"
+              >Privacy Policy</a
+            >
+            <a href="#" class="text-gray-400 hover:text-white mr-4"
+              >Terms of Service</a
+            >
+            <a href="#" class="text-gray-400 hover:text-white">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+      // Mobile Menu Toggle
+      document
+        .getElementById("mobile-menu-button")
+        .addEventListener("click", function () {
+          const mobileMenu = document.getElementById("mobile-menu");
+          mobileMenu.classList.toggle("hidden");
+        });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
+
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            // Close mobile menu if open
+            document.getElementById("mobile-menu").classList.add("hidden");
+
+            // Scroll to target
+            targetElement.scrollIntoView({
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // Add shadow to header on scroll
+      window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+        if (window.scrollY > 10) {
+          header.classList.add("shadow-md");
+        } else {
+          header.classList.remove("shadow-md");
+        }
+      });
+    </script>
+  </body>
+</html>
+
+<!-- Download Section -->
+<section id="download" class="py-16 bg-gradient text-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        Download AgroAdvisor Today
+      </h2>
+      <p class="text-lg md:text-xl max-w-3xl mx-auto">
+        Join thousands of farmers who have transformed their agricultural
+        practices with our smart farming companion.
+      </p>
+    </div>
+
+    <div
+      class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-8"
+    >
+      <a
+        href="#"
+        class="bg-white text-green-700 font-medium py-3 px-8 rounded-xl flex items-center justify-center shadow-lg hover:bg-gray-100 transition duration-300"
+      >
+        <i class="fab fa-google-play text-2xl mr-3"></i>
+        <div class="text-left">
+          <div class="text-xs">Get it on</div>
+          <div class="text-lg font-semibold">Google Play</div>
+        </div>
+      </a>
+      <a
+        href="#"
+        class="bg-white text-green-700 font-medium py-3 px-8 rounded-xl flex items-center justify-center shadow-lg hover:bg-gray-100 transition duration-300"
+      >
+        <i class="fab fa-apple text-2xl mr-3"></i>
+        <div class="text-left">
+          <div class="text-xs">Download on</div>
+          <div class="text-lg font-semibold">App Store</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="mt-12 flex flex-col items-center justify-center text-center">
+      <p class="text-lg">Need help getting started?</p>
+      <a
+        href="#contact"
+        class="text-white underline font-medium hover:text-gray-200"
+        >Contact our support team</a
+      >
+      <img src="./assets/qr.png" class="text-center m-2 h-40 w-40" alt="download apk">
+    </div>
+  </div>
+</section>
+
+
+<!-- Stats Section -->
+<section class="py-12 bg-gray-50">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <div class="text-4xl font-bold text-green-600 mb-2">5,000+</div>
+        <div class="text-gray-600">Dataset size</div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <div class="text-4xl font-bold text-green-600 mb-2">50+</div>
+        <div class="text-gray-600">Supported Crops</div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <div class="text-4xl font-bold text-green-600 mb-2">95%</div>
+        <div class="text-gray-600">Higher Yield Rate</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="py-16 bg-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+        Comprehensive Features for Modern Farming
+      </h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        AgroAdvisor combines agricultural science with cutting-edge technology
+        to provide farmers with everything they need to optimize their yields.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Feature 1 -->
+      <div
+        class="feature-card bg-white rounded-xl shadow-md p-6 transition duration-300"
+      >
+        <div
+          class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-4"
+        >
+          <i class="fas fa-seedling text-2xl text-green-600"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">
+          Crop Suggestion
+        </h3>
+        <p class="text-gray-600">
+          Get personalized crop recommendations based on your soil type, local
+          weather patterns, and historical yield data.
+        </p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div
+        class="feature-card bg-white rounded-xl shadow-md p-6 transition duration-300"
+      >
+        <div
+          class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-4"
+        >
+          <i class="fas fa-cloud-sun-rain text-2xl text-blue-600"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">
+          Weather Forecast
+        </h3>
+        <p class="text-gray-600">
+          Stay ahead with hyperlocal weather forecasts and receive timely alerts
+          for adverse weather conditions.
+        </p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div
+        class="feature-card bg-white rounded-xl shadow-md p-6 transition duration-300"
+      >
+        <div
+          class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-4"
+        >
+          <i class="fas fa-flask text-2xl text-purple-600"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">
+          Fertilizer Guide
+        </h3>
+        <p class="text-gray-600">
+          Access customized fertilizer recommendations to maximize crop health
+          and yield while minimizing costs.
+        </p>
+      </div>
+
+      <!-- Feature 4 -->
+      <div
+        class="feature-card bg-white rounded-xl shadow-md p-6 transition duration-300"
+      >
+        <div
+          class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mb-4"
+        >
+          <i class="fas fa-calendar-alt text-2xl text-yellow-600"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Crop Calendar</h3>
+        <p class="text-gray-600">
+          Never miss important farming activities with timely reminders for
+          sowing, irrigation, pest control, and harvesting.
+        </p>
+      </div>
+
+    
+
+      <!-- Feature 6 -->
+      <div
+        class="feature-card bg-white rounded-xl shadow-md p-6 transition duration-300"
+      >
+        <div
+          class="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mb-4"
+        >
+          <i class="fas fa-landmark text-2xl text-indigo-600"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">
+          Government Schemes
+        </h3>
+        <p class="text-gray-600">
+          Stay updated on the latest agricultural subsidies, loans, and
+          government programs you qualify for.
+        </p>
+      </div>
+
+      <!-- Feature 7 -->
+      <div
+        class="feature-card bg-white rounded-xl shadow-md p-6 transition duration-300"
+      >
+        <div
+          class="bg-pink-100 w-16 h-16 rounded-full flex items-center justify-center mb-4"
+        >
+          <i class="fas fa-robot text-2xl text-pink-600"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">AI Assistant</h3>
+        <p class="text-gray-600">
+          Chat with our AI farming assistant to get instant answers to your
+          agricultural questions anytime.
+        </p>
+      </div>
+
+      
+     
+    </div>
+  </div>
+</section>
+
+<!-- How It Works Section -->
+<section id="how-it-works" class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+        How AgroAdvisor Works
+      </h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        Our simple yet powerful platform helps you make better farming decisions
+        in just a few steps.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Step 1 -->
+      <div class="text-center">
+        <div
+          class="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md"
+        >
+          <span class="text-2xl font-bold text-green-600">1</span>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">
+          Enter Your Farm Details
+        </h3>
+        <p class="text-gray-600">
+          Input your location, soil type, available resources, and farming goals
+          to get started.
+        </p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="text-center">
+        <div
+          class="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md"
+        >
+          <span class="text-2xl font-bold text-green-600">2</span>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">
+          Get Personalized Recommendations
+        </h3>
+        <p class="text-gray-600">
+          Our AI analyzes your data and provides custom crop suggestions and
+          farming advice.
+        </p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="text-center">
+        <div
+          class="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md"
+        >
+          <span class="text-2xl font-bold text-green-600">3</span>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">
+          Monitor & Optimize
+        </h3>
+        <p class="text-gray-600">
+          Track progress, receive alerts, and continuously improve your farming
+          practices.
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-16 text-center">
+      <a
+        href="#download"
+        class="bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-8 rounded-full transition duration-300"
+      >
+        Try It Now
+      </a>
+      
+    </div>
+  </div>
+</section>
+
+<!-- App Screenshots -->
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+        See AgroAdvisor in Action
+      </h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        Explore our intuitive interface designed specifically for farmers.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="overflow-hidden rounded-xl shadow-md">
+        <img
+          src="./assets//Dashboard.jpg"
+          alt="Dashboard Screen"
+          class="w-full h-auto"
+        />
+      </div>
+      <div class="overflow-hidden rounded-xl shadow-md">
+        <img
+          src="./assets/croprecomendation.jpg"
+          alt="Crop Recommendation Screen"
+          class="w-full h-auto"
+        />
+      </div>
+      <div class="overflow-hidden rounded-xl shadow-md">
+        <img
+          src="./assets/ai-assitant.jpg"
+          alt="Weather Forecast Screen"
+          class="w-full h-auto"
+        />
+      </div>
+      <div class="overflow-hidden rounded-xl shadow-md">
+        <img
+          src="./assets/watherforcast.jpg"
+          alt="AI Assistant Screen"
+          class="w-full h-auto"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Research Section -->
+<section id="research" class="py-16 bg-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+        Research & Publications
+      </h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        Our app is built on solid scientific research and continuously evolving
+        agricultural technology.
+      </p>
+    </div>
+
+    <div class="fle flex-col justify-center items-center md:grid-cols-2 gap-8">
+      <!-- Research Paper 1 -->
+      <div class="bg-white p-6 text-center rounded-xl shadow-md">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">
+            A Small Review on Hybrid Machine Learning Algorithm For
+            Smart Agriculture System
+        </h3>
+        <p class="text-gray-600 mb-4">
+          This paper explores how advanced machine learning algorithms can
+          predict best suited crop  with high accuracy based on historical data and
+          environmental factors.
+        </p>
+        <div class="flex items-center text-sm text-gray-500">
+          <span class="mr-4"
+            ><i class="fas fa-calendar-alt mr-1"></i> Published: August 2025</span
+          >
+          <a href="https://drive.google.com/file/d/1iEKstLoQKsLE64O2hCGIVL7M3SNcFU6q/view?usp=sharing" class="text-green-600 hover:text-green-700"
+            >Read Paper <i class="fas fa-arrow-right ml-1"></i
+          ></a>
+        </div>
+      </div>
+
+     
+
+
+
+    </div>
+  </div>
+</section>
+
+<!-- Team Section -->
+<section id="team" class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+        Meet Our Team
+      </h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        A passionate group of agricultural experts, data scientists, and
+        developers working to revolutionize farming.
+      </p>
+    </div>
+
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+    >
+      <!-- Team Member 1 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden">
+        <img
+          src="./assets/author1.jpg"
+          alt="Priyanshu Rathore"
+          class="w-full h-64 object-cover"
+        />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800 mb-1">
+            Priyanshu Rathore
+          </h3>
+          <p class="text-gray-600 mb-4">Team Member</p>
+          <div class="flex space-x-3">
+            <a href="https://www.linkedin.com/in/priyanshu-rathore-690a84292/" class="text-gray-400 hover:text-blue-500"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="#" class="text-gray-400 hover:text-blue-400"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" class="text-gray-400 hover:text-green-600"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Member 2 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden">
+        <img
+          src="./assets/author3.jpg"
+          alt="Ritesh Yadav"
+          class="w-full h-64 object-cover"
+        />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800 mb-1">Ritesh Yadav</h3>
+          <p class="text-gray-600 mb-4">Team Member</p>
+          <div class="flex space-x-3">
+            <a href="https://www.linkedin.com/in/ritesh-yadav-a71686285/" class="text-gray-400 hover:text-blue-500"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="#" class="text-gray-400 hover:text-blue-400"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" class="text-gray-400 hover:text-green-600"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Member 3 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden">
+        <img
+          src="./assets/author2.jpg"
+          alt="Vidisha Verma"
+          class="w-full h-64 object-cover"
+        />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800 mb-1">
+            Vidisha Verma
+          </h3>
+          <p class="text-gray-600 mb-4">Team Member</p>
+          <div class="flex space-x-3">
+            <a href="https://www.linkedin.com/in/vidisha-verma-a22618226/" class="text-gray-400 hover:text-blue-500"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="#" class="text-gray-400 hover:text-blue-400"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" class="text-gray-400 hover:text-green-600"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Member 4 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden">
+        <img
+          src="./assets/mentor.jpg"
+          alt="Sambit Satpathy"
+          class="w-full h-64 object-cover"
+        />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800 mb-1">Dr. Sambit Satpathy</h3>
+          <p class="text-gray-600 mb-4">Associate Professor(Project Mento)</p>
+          <div class="flex space-x-3">
+            <a href="https://www.linkedin.com/in/sambit-satpathy-437b25118/" class="text-gray-400 hover:text-blue-500"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="#" class="text-gray-400 hover:text-blue-400"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" class="text-gray-400 hover:text-green-600"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
